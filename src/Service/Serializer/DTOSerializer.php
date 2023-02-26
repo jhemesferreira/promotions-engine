@@ -15,9 +15,7 @@ class DTOSerializer implements SerializerInterface
     public function __construct()
     {
         $this->serializer = new Serializer(
-            // normalizers
             [new ObjectNormalizer(nameConverter: new CamelCaseToSnakeCaseNameConverter())],
-            //encoders
             [new JsonEncoder()]
         );
     }
