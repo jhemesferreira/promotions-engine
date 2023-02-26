@@ -201,4 +201,9 @@ class LowestPriceEnquiry implements PromotionEquiryInterface
 
         return $this;
     }
+
+    public function jsonSerialize()
+    {
+        return get_object_vars($this);
+    }
 }
